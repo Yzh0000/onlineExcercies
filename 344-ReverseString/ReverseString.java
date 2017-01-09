@@ -36,8 +36,16 @@ public String reverseString(String s) {
         return new String(sChar);
           
     }
+/*4th: StringBuilder has reverse() function.
+public String reverseString(String s) {
+        StringBuilder sb = new StringBuilder(s);
+        return sb.reverse().toString();
+    }
+*/
 
 }
+
 // String is immutable in Java. StringBuffer, StringBuilder are better.
+// StringBuilder has reverse() function.
 // char[] <--> String
 //toCharArray() <--> new String()
