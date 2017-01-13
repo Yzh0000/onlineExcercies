@@ -1,5 +1,4 @@
 public class Solution {
-    public char findTheDpublic class Solution {
     public char findTheDifference(String s, String t) {
         // use ^ operation.
         char[] charS = s.toCharArray();
