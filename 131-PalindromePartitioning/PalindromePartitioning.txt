@@ -1,0 +1,39 @@
+class Solution {
+public:
+    vector<vector<string>> partition(string s) {
+        vector<vector<string>> ress;
+        vector<string>  res;
+        myfun(s,0,ress,res);
+        return ress;
+    }
+    
+    bool isPalind(string s, int l, int r, string& palind){
+        int ll=l;
+        int rr=r;
+        while(r>=l){
+            if(s[l]!=s[r])  return false;
+            else{
+                l++;
+                r--;
+            }
+        }
+        palind=s.substr(ll,rr-ll+1);
+        return true;
+    }
+    
+    void myfun(string s,int i,vector<vector<string>>& ress,vector<string>& res){
+        if(i==s.size()){
+            ress.push_back(res);
+            return;
+        }
+        string palind;
+        
+        for(int j=i;j<s.size();j++){
+            if(isPalind(s,i,j,palind)){
+                res.push_back(palind);
+                myfun(s,j+1,ress,res);
+                res.pop_back();
+            }
+        }
+    }
+};
