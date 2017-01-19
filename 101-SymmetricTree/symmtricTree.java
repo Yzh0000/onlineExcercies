@@ -9,6 +9,11 @@
  */
 public class Solution {
     //1st version: why this is wrong? even for [1,2]
+    //**************!!!REASON!!!*********************
+    //Since all are references, reflectByRoot() also change the original root.
+    
+    
+    
     // public boolean isSymmetric(TreeNode root) {
     //     //by induction
     //     return isSame(root, reflectByRoot(root));
